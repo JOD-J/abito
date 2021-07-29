@@ -128,6 +128,7 @@ body {
 }
 
 .card {
+	width: 264px;
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
@@ -362,9 +363,15 @@ body {
 	border: none;
 	cursor: pointer;
 }
+
 .close-menu {
 	display: none;
 }
+
+.sidebar-single {
+	display: block;
+}
+
 @media (max-width: 1200px) {
 	.container {
 		max-width: 960px;
@@ -377,6 +384,20 @@ body {
 	.card-img {
 		height: 200px;
 		width: 100%;
+	}
+
+	.sidebar-single {
+		display: none;
+	}
+
+	.main-single {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.page-content-single {
+		display: flex;
+		grid-template-columns: 12fr;
 	}
 }
 
@@ -423,11 +444,13 @@ body {
 		transform: translateX(100%);
 		opacity: 0;
 	}
+
 	.is-open {
 		transform: translateX(0);
 		opacity: 1;
 
 	}
+
 	.navbar-menu {
 		margin-left: auto;
 		margin-bottom: 20px;
@@ -439,16 +462,20 @@ body {
 		justify-content: center;
 		/* margin-right: 0; */
 	}
+
 	.menu-item:not(:last-child) {
 		margin-right: 0;
 	}
+
 	.menu-item {
 		margin-bottom: 10px;
 	}
+
 	.button-group {
 		display: flex;
 		flex-direction: column;
 	}
+
 	.close-menu {
 		display: block;
 		position: absolute;
@@ -456,6 +483,20 @@ body {
 		top: 30px;
 		cursor: pointer;
 		background-color: white;
+	}
+
+	.main-single {
+		/* align-items: center; */
+		flex-direction: column;
+	}
+
+	.content {
+		order: 2;
+		margin-right: 0;
+	}
+
+	.author {
+		order: 1;
 	}
 }
 
@@ -476,7 +517,14 @@ body {
 	.page-content {
 		grid-template-columns: 12fr;
 	}
+
+	.main-single {
+		align-items: center;
+	}
 	.search-button-text {
 		display: none;
+	}
+	.content {
+		max-width: 90%;
 	}
 }
